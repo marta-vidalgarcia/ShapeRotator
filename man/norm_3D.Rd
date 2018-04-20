@@ -1,7 +1,6 @@
 \name{norm_3D}
 \alias{norm_3D}
 
-}
 \description{
 This is an internal function for the ShapeRotator tool. This function allows you to obtain the length of a vector u.
 }
