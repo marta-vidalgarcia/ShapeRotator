@@ -7,4 +7,3 @@ Maintainer: Marta Vidal-García <marta.vidalga@gmail.com>
 Description: Here we describe a simple geometric rigid rotation approach that removes the effect of random translation and rotation, enabling the morphological analysis of 3D articulated structures. Our method is based on Cartesian coordinates in 3D space so it can be applied to any morphometric problem that also uses 3D coordinates.
 License: /
 Encoding: UTF-8
-LazyData: true
