@@ -4,9 +4,6 @@
 ######################################
 
 
-library(devtools)
-#install_github("marta-vidalgarcia/ShapeRotator")
-
 ## DEBUG
 immediate_on = TRUE
 
