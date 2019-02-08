@@ -1,4 +1,5 @@
 \name{norm_3D}
+\title{norm_3D}
 \alias{norm_3D}
 
 \description{
