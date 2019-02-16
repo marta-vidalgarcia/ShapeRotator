@@ -37,15 +37,20 @@ Takes an array T and an index in the array landmark, and translates it to the or
 
 
 \examples{
-vector_1 <- c(1, 2, 3)
-vector_1_length <- norm_3D(vector_1)
->vector_1_length
-[1] 3.741657
+#Landmarks
+land.a=55
+land.b=49
+land.c=54
+land.d =4
 
-vector_2 <- c(1, 1, 1)
-vector_2_length <- norm_3D(vector_2)
-vector_2_length
-[1] 1.732051
+land.e=22
+land.f=21
+land.g=2
+land.h=11
+
+# Translate the data
+data.1_t <- translate(skull, land.a)
+data.2_t <- translate(mandible, land.e)
 }
 
 \references{
