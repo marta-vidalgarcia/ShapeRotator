@@ -56,7 +56,4 @@ M. Vidal-García, L. Bandara and J.S. Keogh. 2018. ShapeRotator: An R tool for s
 \author{
 Marta Vidal-Garcia (marta.vidalga@gmail.com)
 }
-% Add one or more standard keywords, see file 'KEYWORDS' in the
-% R documentation directory.
-\keyword{ ~kwd1 }% use one of  RShowDoc("KEYWORDS")
-\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line
+
