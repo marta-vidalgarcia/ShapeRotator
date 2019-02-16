@@ -22,7 +22,7 @@ a vector that contains three-dimensional coordinates (x, y, z) indicating where 
 }
 
 \value{
-This function returns a translated T' array of dimensions (p, 3, n), in which p indicated the number of landmarks, and n the number of specimens included in the array. The translated array will keep the dimnames associated with each specimen (n).
+This function returns a translated T array of dimensions (p, 3, n), in which p indicates the number of landmarks, and n the number of specimens included in the array. The translated array will keep the dimnames associated with each specimen (n).
 
 }
 
