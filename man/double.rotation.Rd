@@ -16,6 +16,33 @@ an object of the class "array" that contains translated three-dimensional landma
   \item{data.2}{
 an object of the class "array" that contains translated three-dimensional landmarks for structure #2 (e.g. mandible)
 }
+  \item{land.a}{
+an integer object that indicates the position of the three-dimensional landmark A
+}
+  \item{land.b}{
+an integer object that indicates the position of the three-dimensional landmark B
+}
+  \item{land.c}{
+an integer object that indicates the position of the three-dimensional landmark C
+}
+  \item{land.d}{
+an integer object that indicates the position of the three-dimensional landmark D
+}
+  \item{land.e}{
+an integer object that indicates the position of the three-dimensional landmark E
+}
+  \item{land.f}{
+an integer object that indicates the position of the three-dimensional landmark F
+}
+  \item{land.g}{
+an integer object that indicates the position of the three-dimensional landmark G
+}
+  \item{land.h}{
+an integer object that indicates the position of the three-dimensional landmark H
+}
+  \item{angle}{
+an object of the class "numeric" that contains the rotation angle in degrees (from 0° to 360°)
+}
 }
 
 \value{
