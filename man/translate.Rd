@@ -3,7 +3,7 @@
 \alias{translate}
 
 \description{
-Tnaslates array T to origin point
+Translates array T to origin point
 }
 \usage{
 translate(T, landmark, origin = c(0,0,0))
