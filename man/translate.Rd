@@ -26,7 +26,7 @@ This function returns a translated T array of dimensions (p, 3, n), in which p i
 
 }
 
-\Details{
+\details{
 Takes an array T and an index in the array landmark, and translates it to the origin. Each structure will be translated to the point of origin so that ̃p0 =(0,0,0). We will be translating landmark A from structure 1 and landmark D from structure 2 for a single-point articulated rotation, and landmark A from structure 1 and landmark E from structure 2 for a double rotation (double-point articulated rotation). Thus, the distance from the coordinates of landmark A (Ax, Ay, Az) is substracted from all the landmarks in all specimens, for example (Nx − Ax, Ny – Ay, Nz – Az) for landmark N, for structure 1. For structure 2, the distance from the coordinates of landmark D or E depending on the type of rotation. For example, in a double rotation, (Ex, Ey, Ez) is substracted from all the landmarks in all specimens: (Nx − Ex, Ny – Ey, Nz – Ez). Landmarks A and E will equal (0,0,0), so that Ax=Ay=Az=Ex=Ey=Ez=0The default is to set the origin to (0,0,0), but this can be specified to be something else. In order to use this function, the landmark data needs to be imported to the R environment using geomorph (Adams et al., 2018)
 }
 \note{

@@ -29,9 +29,10 @@ an integer object that indicates which specimen will be plotted. The number of t
 This function returns a 3D plot of the rotated structures (e.g. mandible and skull).
 }
 
-\Details{
+\details{
 Plots the two rotated datasets in 3D for a specimen (specimen.num), and each structure is plotted with a different colour. Default is black and red. This uses the function plot3D from the R package plot3D (https://cran.r-project.org/web/packages/plot3D/) internally.
 }
+
 \note{
 %%  ~~further notes~~
 }

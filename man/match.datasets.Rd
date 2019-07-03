@@ -23,7 +23,7 @@ an object of the class "array" that contains three-dimensional landmarks for str
 This function returns a list with the two translated arrays of dimensions (p, 3, n), in which dimnames associated with each specimen (n) are in the same order.
 }
 
-\Details{
+\details{
 Takes the two translated arrays and joined them by dimnames. Unmatched datasets (specimens missing in data.1 or data.2) are deleted.
 }
 \note{

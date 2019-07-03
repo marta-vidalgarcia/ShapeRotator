@@ -24,9 +24,10 @@ an object of the class "array" that contains the rotated three-dimensional landm
 This function returns an array of the joined two arrays comprising the two rotated structures (e.g. mandible and skull).
 }
 
-\Details{
+\details{
 This function join the two arrays that were rotated using double.rotation() or simple.rotation() and return a big array from joining the two smaller arrays. It is possible to translate one of the objects after the rotation, in the case of not wanting them in contact to one another, or in a slightly different location. The vector used in the translation might have to change depending on the angle used in the rotation function, in order to represent biologically-relevant positions of the two structures relative to one another.
 }
+
 \note{
 %%  ~~further notes~~
 }

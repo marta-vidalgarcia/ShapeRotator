@@ -49,7 +49,7 @@ an object of the class "numeric" that contains the rotation angle in degrees (fr
 Returns a list of two object where $rotated1 gives the first rotated array and $rotated2 gives the second
 }
 
-\Details{
+\details{
 This function allows the rigid rotation of two structures from a two-points articulation (e.g. skull and mandible). It allows to select the desired angle between the two structures so that we can perform the rigid rotation of each structure positioning them in the selected angle in relation to each other, by providing the desired angle in degrees (from 0° to 360°). Even though each of these rotations are calculated internally (only the four landmarks per structure and the desired angle between them need to be provided), it will be beneficial to choose landmarks that are spatially arranged in a way that facilitates the rotation process, and results in the rotating multi-structure being placed in a biologically-relevant angle between each sub-structure. ShapeRotator will give a warning message if the landmarks chosen are not optimal (i.e. the position and orientation of the two structures vary across the specimens due to morphological variability and not because of the rigid rotation).
 }
 \note{
