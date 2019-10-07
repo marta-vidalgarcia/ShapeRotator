@@ -5,7 +5,8 @@
 
 `library(devtools)`
 
-`install _ github(“marta-vidalgarcia/ShapeRotator”)`
+`install_github("marta-vidalgarcia/ShapeRotator")`
+`library(ShapeRotator)`
 
 ***
 
