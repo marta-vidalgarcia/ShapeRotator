@@ -75,7 +75,7 @@ land.e=22
 land.f=21
 
 # We can rigidly rotate each structure relative to each other in multiple
-# angles (e.g. 0˚, 15˚, 45˚, 90˚, or 120˚)
+# angles (e.g. 0, 15, 45, 90, or 120 degrees)
 rotation_0 = single.rotation(data.1, data.2, land.a, land.b, land.c,
 land.d, land.e, land.f, 0)
 

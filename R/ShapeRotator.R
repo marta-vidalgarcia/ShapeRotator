@@ -162,16 +162,16 @@ vector.angle <- function (angle)
 #' @details
 #'   Takes an array T and an index in the array landmark, and translates it to
 #'   the origin. Each structure will be translated to the point of origin so
-#'   that  ̃p0 =(0,0,0). We will be translating landmark A from structure 1 and
+#'   that p0 =(0,0,0). We will be translating landmark A from structure 1 and
 #'    landmark D from structure 2 for a single-point articulated rotation.
 #'    And landmark A from structure 1 and landmark E from structure 2 for a
 #'    double rotation (double-point articulated rotation). Thus, the distance
 #'    from the coordinates of landmark A (Ax, Ay, Az) is substracted from all
-#'    the landmarks in all specimens. For example (Nx − Ax, Ny – Ay, Nz – Az)
+#'    the landmarks in all specimens. For example (Nx - Ax, Ny - Ay, Nz - Az)
 #'    for landmark N, for structure 1. For structure 2, the distance from the
 #'    coordinates of landmark D or E depending on the type of rotation. For
 #'    example, in a double rotation, (Ex, Ey, Ez) is substracted from all the
-#'    landmarks in all specimens: (Nx − Ex, Ny – Ey, Nz – Ez). Landmarks A and
+#'    landmarks in all specimens: (Nx - Ex, Ny - Ey, Nz - Ez). Landmarks A and
 #'    E will equal (0,0,0), so that Ax=Ay=Az=Ex=Ey=Ez=0. The default is to set
 #'    the origin to (0,0,0), but this can be specified to be something else. In
 #'    order to use this function, the landmark data needs to be imported to the
@@ -327,7 +327,7 @@ rotate.orientation <- function(arr, land, vec)
 #' land.f=21
 #'
 #' # We can rigidly rotate each structure relative to each other in multiple
-#' # angles (e.g. 0˚, 15˚, 45˚, 90˚, or 120˚)
+#' # angles (e.g. 0, 15, 45, 90, or 120 degrees)
 #' rotation_0 = single.rotation(data.1, data.2, land.a, land.b, land.c,
 #' land.d, land.e, land.f, 0)
 #'
@@ -503,7 +503,7 @@ simple.rotation <- function(data.1, data.2, land.a, land.b, land.c, land.d, land
 #'  articulation (e.g. skull and mandible). It allows to select the desired
 #'  angle between the two structures so that we can perform the rigid rotation
 #'  of each structure positioning them in the selected angle in relation to
-#'  each other, by providing the desired angle in degrees (from 0° to 360°).
+#'  each other, by providing the desired angle in degrees (from 0 to 360 degrees).
 #'  Even though each of these rotations are calculated internally (only the
 #'  four landmarks per structure and the desired angle between them need to be
 #'  provided), it will be beneficial to choose landmarks that are spatially
@@ -529,7 +529,7 @@ simple.rotation <- function(data.1, data.2, land.a, land.b, land.c, land.d, land
 #' land.h=11
 #'
 #' # We can rigidly rotate each structure relative to each other in multiple
-#' # angles (e.g. 0˚, 15˚, 45˚, 90˚, or 120˚)
+#' # angles (e.g. 0, 15, 45, 90, or 120 degrees)
 #' rotation_0 = double.rotation(data.1, data.2, land.a, land.b, land.c, land.d,
 #' land.e, land.f, land.g, land.h, 0)
 #' rotation_15 = double.rotation(data.1, data.2, land.a, land.b, land.c, land.d,
@@ -901,7 +901,7 @@ match.datasets <- function(data.1, data.2)
 }
 
 
-## THese should be obselete.
+## These should be obsolete.
 # Join two datasets
 join.datasets <- function(data.1, data.2)
 {

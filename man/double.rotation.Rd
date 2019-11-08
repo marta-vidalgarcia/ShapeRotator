@@ -53,7 +53,7 @@ This function allows the rigid rotation of two structures from a two-points
  articulation (e.g. skull and mandible). It allows to select the desired
  angle between the two structures so that we can perform the rigid rotation
  of each structure positioning them in the selected angle in relation to
- each other, by providing the desired angle in degrees (from 0° to 360°).
+ each other, by providing the desired angle in degrees (from 0 to 360 degrees).
  Even though each of these rotations are calculated internally (only the
  four landmarks per structure and the desired angle between them need to be
  provided), it will be beneficial to choose landmarks that are spatially
@@ -77,7 +77,7 @@ land.g=2
 land.h=11
 
 # We can rigidly rotate each structure relative to each other in multiple
-# angles (e.g. 0˚, 15˚, 45˚, 90˚, or 120˚)
+# angles (e.g. 0, 15, 45, 90, or 120 degrees)
 rotation_0 = double.rotation(data.1, data.2, land.a, land.b, land.c, land.d,
 land.e, land.f, land.g, land.h, 0)
 rotation_15 = double.rotation(data.1, data.2, land.a, land.b, land.c, land.d,

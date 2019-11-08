@@ -1,6 +1,6 @@
 Package: ShapeRotator
 Type: Package
-Title: An R Tool For Standardised Rigid Rotations Of Articulated Three-Dimensional Structures With Application For Geometric morphometrics
+Title: An R Tool For Standardised Rigid Rotations Of Articulated Three-Dimensional Structures With Application For Geometric Morphometrics
 Version: 0.1.0
 Authors@R: c(person('Vidal-Garcia', 'Marta', email = 'marta.vidalga@gmail.com', role=c('aut', 'cre'), comment = c(ORCID = '0000-0001-7617-7329')), person('Bandara', 'Lashi', role='aut'), person('Keogh', 'J. Scott', role='aut'))
 Maintainer: Marta Vidal-García <marta.vidalga@gmail.com>
@@ -12,6 +12,7 @@ Packaged: 2019-08-29 17:47:47 UTC; marta.vidalgarcia
 Encoding: UTF-8
 Repository: CRAN
 Imports: 
-  plot3D,
+  plot3D
+Suggests:
   geomorph 
 BugReports: https://github.com/marta-vidalgarcia/ShapeRotator/issues
