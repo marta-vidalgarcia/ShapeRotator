@@ -1,0 +1,5 @@
+.Rbuildignore
+.DS_Store
+R/.DS_Store
+ShapeRotator.Rproj
+.gitignore.swp
