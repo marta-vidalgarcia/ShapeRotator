@@ -65,7 +65,12 @@ This function allows the rigid rotation of two structures from a two-points
  variability and not because of the rigid rotation).
 }
 \examples{
-\dontrun{
+#Data
+data(double_data_1)
+data(double_data_2)
+data.1 <- double_data_1
+data.2 <- double_data_2
+
 #Landmarks
 land.a=55
 land.b=49
@@ -91,10 +96,12 @@ land.d, land.e, land.f, land.g, land.h, 120)
 
 # The function returns a list of two objects that correspond to each rotated
 # structure
-rotation_0$rotated1 #rotated dataset 1 (e.g. skull)
-rotation_0$rotated2 #rotated dataset 2 (e.g. mandible)
+rotation_0$rotated1 #rotated dataset 1 #(e.g. skull)
+rotation_0$rotated2 #rotated dataset 2 #(e.g. mandible)
 
-}
+# The two datasets can be joined with the function join.arrays()
+head_0degrees <- join.arrays(rotation_0$rotated1, rotation_0$rotated2)
+
 
 }
 \references{

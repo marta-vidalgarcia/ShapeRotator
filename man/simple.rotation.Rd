@@ -64,7 +64,10 @@ This function allows the rigid rotation of two structures from a
  not because of the rigid rotation).
 }
 \examples{
-\dontrun{
+#Data
+data.1 <- simple_data_1
+data.2 <- simple_data_2
+
 #Landmarks
 land.a=55
 land.b=49
@@ -76,27 +79,29 @@ land.f=21
 
 # We can rigidly rotate each structure relative to each other in multiple
 # angles (e.g. 0, 15, 45, 90, or 120 degrees)
-rotation_0 = single.rotation(data.1, data.2, land.a, land.b, land.c,
+rotation_0 = simple.rotation(data.1, data.2, land.a, land.b, land.c,
 land.d, land.e, land.f, 0)
 
-rotation_15 = single.rotation(data.1, data.2, land.a, land.b, land.c,
+rotation_15 = simple.rotation(data.1, data.2, land.a, land.b, land.c,
 land.d, land.e, land.f, 15)
 
-rotation_45 = single.rotation(data.1, data.2, land.a, land.b, land.c,
+rotation_45 = simple.rotation(data.1, data.2, land.a, land.b, land.c,
 land.d, land.e, land.f, 45)
 
-rotation_90 = single.rotation(data.1, data.2, land.a, land.b, land.c,
+rotation_90 = simple.rotation(data.1, data.2, land.a, land.b, land.c,
 land.d, land.e, land.f, 90)
 
-rotation_120 = single.rotation(data.1, data.2, land.a, land.b, land.c,
+rotation_120 = simple.rotation(data.1, data.2, land.a, land.b, land.c,
 land.d, land.e, land.f, 120)
 
 # The function returns a list of two objects that correspond to each rotated
 # structure
-rotation_0$rotated1 #rotated dataset 1 (e.g. radioulna)
-rotation_0$rotated2 #rotated dataset 2 (e.g. humerus)
+rotation_0$rotated1 #rotated dataset 1 #(e.g. radioulna)
+rotation_0$rotated2 #rotated dataset 2 #(e.g. humerus)
 
-}
+# The two datasets can be joined with the function join.arrays()
+arm_0degrees <- join.arrays(rotation_0$rotated1, rotation_0$rotated2)
+
 
 }
 \references{

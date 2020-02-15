@@ -45,7 +45,12 @@ Takes an array T and an index in the array landmark, and translates it to
    R environment using geomorph (Adams et al., 2018)
 }
 \examples{
-\dontrun{
+#Data
+data(double_data_1)
+data(double_data_2)
+data.1 <- double_data_1
+data.2 <- double_data_2
+
 #Landmarks
 land.a=55
 land.b=49
@@ -58,9 +63,8 @@ land.g=2
 land.h=11
 
 # Translate the data
-data.1_t <- translate(skull, land.a)
-data.2_t <- translate(mandible, land.e)
-}
+data.1_t <- translate(data.1, land.a)
+data.2_t <- translate(data.2, land.e)
 
 }
 \references{

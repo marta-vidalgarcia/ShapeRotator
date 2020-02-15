@@ -35,6 +35,9 @@ relative to one another.
 rotation_45 = double.rotation(data.1, data.2, land.a, land.b, land.c, land.d,
 land.e, land.f, land.g, land.h, 45)
 
+rotation_45_t <- join.arrays(rotation_45$rotated1, rotation_45$rotated2)
+
+# The datasets can also be joined after further translation
 rotation_45_t <- join.arrays(rotation_45$rotated1,
 translate(rotation_45$rotated2, land.e , skull_translate))
 }

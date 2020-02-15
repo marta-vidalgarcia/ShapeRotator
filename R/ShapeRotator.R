@@ -180,7 +180,12 @@ vector.angle <- function (angle)
 #' @author Marta Vidal-Garcia
 #'
 #' @examples
-#' \dontrun{
+#' #Data
+#' data(double_data_1)
+#' data(double_data_2)
+#' data.1 <- double_data_1
+#' data.2 <- double_data_2
+#'
 #' #Landmarks
 #' land.a=55
 #' land.b=49
@@ -193,9 +198,8 @@ vector.angle <- function (angle)
 #' land.h=11
 #'
 #' # Translate the data
-#' data.1_t <- translate(skull, land.a)
-#' data.2_t <- translate(mandible, land.e)
-#' }
+#' data.1_t <- translate(data.1, land.a)
+#' data.2_t <- translate(data.2, land.e)
 #'
 #' @references Adams, D. C., M. L. Collyer, and A. Kaliontzopoulou. 2018.
 #' Geomorph: Software for geometric morphometric analysis. R package version
@@ -316,7 +320,10 @@ rotate.orientation <- function(arr, land, vec)
 #' @author Marta Vidal-Garcia
 #'
 #' @examples
-#' \dontrun{
+#' #Data
+#' data.1 <- simple_data_1
+#' data.2 <- simple_data_2
+#'
 #' #Landmarks
 #' land.a=55
 #' land.b=49
@@ -328,27 +335,29 @@ rotate.orientation <- function(arr, land, vec)
 #'
 #' # We can rigidly rotate each structure relative to each other in multiple
 #' # angles (e.g. 0, 15, 45, 90, or 120 degrees)
-#' rotation_0 = single.rotation(data.1, data.2, land.a, land.b, land.c,
+#' rotation_0 = simple.rotation(data.1, data.2, land.a, land.b, land.c,
 #' land.d, land.e, land.f, 0)
 #'
-#' rotation_15 = single.rotation(data.1, data.2, land.a, land.b, land.c,
+#' rotation_15 = simple.rotation(data.1, data.2, land.a, land.b, land.c,
 #' land.d, land.e, land.f, 15)
 #'
-#' rotation_45 = single.rotation(data.1, data.2, land.a, land.b, land.c,
+#' rotation_45 = simple.rotation(data.1, data.2, land.a, land.b, land.c,
 #' land.d, land.e, land.f, 45)
 #'
-#' rotation_90 = single.rotation(data.1, data.2, land.a, land.b, land.c,
+#' rotation_90 = simple.rotation(data.1, data.2, land.a, land.b, land.c,
 #' land.d, land.e, land.f, 90)
 #'
-#' rotation_120 = single.rotation(data.1, data.2, land.a, land.b, land.c,
+#' rotation_120 = simple.rotation(data.1, data.2, land.a, land.b, land.c,
 #' land.d, land.e, land.f, 120)
 #'
 #' # The function returns a list of two objects that correspond to each rotated
 #' # structure
-#' rotation_0$rotated1 #rotated dataset 1 (e.g. radioulna)
-#' rotation_0$rotated2 #rotated dataset 2 (e.g. humerus)
+#' rotation_0$rotated1 #rotated dataset 1 #(e.g. radioulna)
+#' rotation_0$rotated2 #rotated dataset 2 #(e.g. humerus)
 #'
-#' }
+#' # The two datasets can be joined with the function join.arrays()
+#' arm_0degrees <- join.arrays(rotation_0$rotated1, rotation_0$rotated2)
+#'
 #'
 #' @references M. Vidal-García, L. Bandara and J.S. Keogh. 2018. ShapeRotator:
 #' An R tool for standardized rigid rotations of articulated three-dimensional
@@ -517,7 +526,12 @@ simple.rotation <- function(data.1, data.2, land.a, land.b, land.c, land.d, land
 #' @author Marta Vidal-Garcia
 #'
 #' @examples
-#' \dontrun{
+#' #Data
+#' data(double_data_1)
+#' data(double_data_2)
+#' data.1 <- double_data_1
+#' data.2 <- double_data_2
+#'
 #' #Landmarks
 #' land.a=55
 #' land.b=49
@@ -543,10 +557,12 @@ simple.rotation <- function(data.1, data.2, land.a, land.b, land.c, land.d, land
 #'
 #' # The function returns a list of two objects that correspond to each rotated
 #' # structure
-#' rotation_0$rotated1 #rotated dataset 1 (e.g. skull)
-#' rotation_0$rotated2 #rotated dataset 2 (e.g. mandible)
+#' rotation_0$rotated1 #rotated dataset 1 #(e.g. skull)
+#' rotation_0$rotated2 #rotated dataset 2 #(e.g. mandible)
 #'
-#' }
+#' # The two datasets can be joined with the function join.arrays()
+#' head_0degrees <- join.arrays(rotation_0$rotated1, rotation_0$rotated2)
+#'
 #'
 #' @references M. Vidal-García, L. Bandara and J.S. Keogh. 2018. ShapeRotator:
 #' An R tool for standardized rigid rotations of articulated three-dimensional
@@ -778,6 +794,9 @@ plot3D::scatter3D(specimen[,1], specimen[,2], specimen[,3], col = colour, xlim=c
 #' rotation_45 = double.rotation(data.1, data.2, land.a, land.b, land.c, land.d,
 #' land.e, land.f, land.g, land.h, 45)
 #'
+#' rotation_45_t <- join.arrays(rotation_45$rotated1, rotation_45$rotated2)
+#'
+#' # The datasets can also be joined after further translation
 #' rotation_45_t <- join.arrays(rotation_45$rotated1,
 #' translate(rotation_45$rotated2, land.e , skull_translate))
 #' }
@@ -977,3 +996,122 @@ compute.distortion <- function(tdata, rdata)
 	return (dist)
 }
 
+### DATASETS ###
+# Humerus data for the simple.rotation
+#'
+#' @docType data
+#'
+#' @name simple_data_1
+#'
+#' @format An array with landmark data (humerus)
+#'
+#' @aliases simple_data_1
+#'
+#' @title Landmark data from frog humerus
+#'
+#' @description Landmark data from frog humerus (Vidal-Garciía & Keogh, 2017)
+#'
+#' @keywords datasets
+#'
+#' @references   M. Vidal-García & J.S. Keogh. 2017. Phylogenetic conservatism in skulls and
+#' evolutionary lability in limbs–morphological evolution across an ancient frog
+#' radiation is shaped by diet, locomotion and burrowing. BMC evolutionary biology 17:165
+#'
+#' M. Vidal-García, L. Bandara and J.S. Keogh. 2018. ShapeRotator: An R tool
+#' for standardized rigid rotations of articulated three-dimensional
+#' structures with application for geometric morphometrics.
+#' Ecology and Evolution. DOI: 10.1002/ece3.4018
+#'
+#' @keywords datasets
+#'
+#' @usage data(simple_data_1)
+"simple_data_1"
+
+#Radioulna data for the simple.rotation
+#'
+#' @docType data
+#'
+#' @name simple_data_2
+#'
+#' @aliases simple_data_2
+#'
+#' @format An array with landmark data (radioulnas)
+#'
+#' @title Landmark data from frog radioulnas
+#'
+#' @description Landmark data from frog radioulnas (Vidal-Garciía & Keogh, 2017)
+#'
+#' @keywords datasets
+#'
+#' @references   M. Vidal-García & J.S. Keogh. 2017. Phylogenetic conservatism in skulls and
+#' evolutionary lability in limbs–morphological evolution across an ancient frog
+#' radiation is shaped by diet, locomotion and burrowing. BMC evolutionary biology 17:165
+#'
+#' M. Vidal-García, L. Bandara and J.S. Keogh. 2018. ShapeRotator: An R tool
+#' for standardized rigid rotations of articulated three-dimensional
+#' structures with application for geometric morphometrics.
+#' Ecology and Evolution. DOI: 10.1002/ece3.4018
+#'
+#' @keywords datasets
+#'
+#' @usage data(simple_data_2)
+"simple_data_2"
+
+# Crania data for the double.rotation
+#'
+#' @docType data
+#'
+#' @name double_data_1
+#'
+#' @format An array with landmark data (crania)
+#'
+#' @aliases double_data_1
+#'
+#' @title Landmark data from head-first burrowing worm lizards' crania
+#'
+#' @description Landmark data from head-first burrowing worm lizards' crania (Kazi & Hipsley, 2018)
+#'
+#' @keywords datasets
+#'
+#' @references   S. Kazi & C.A. Hipsley. 2018. Conserved evolution of skull shape in Caribbean
+#' head-first burrowing worm lizards (Squamata: Amphisbaenia) Biological Journal
+#' of the Linnean Society 125:14-29
+#'
+#' M. Vidal-García, L. Bandara and J.S. Keogh. 2018. ShapeRotator: An R tool
+#' for standardized rigid rotations of articulated three-dimensional
+#' structures with application for geometric morphometrics.
+#' Ecology and Evolution. DOI: 10.1002/ece3.4018
+#'
+#' @keywords datasets
+#'
+#' @usage data(double_data_1)
+"double_data_1"
+
+# Mandible data for the double.rotation
+#'
+#' @docType data
+#'
+#' @name double_data_2
+#'
+#' @aliases double_data_2
+#'
+#' @format An array with landmark data (mandibles)
+#'
+#' @title Landmark data from head-first burrowing worm lizards' mandibles
+#'
+#' @description Landmark data from head-first burrowing worm lizards' mandibles (Kazi & Hipsley, 2018)
+#'
+#' @keywords datasets
+#'
+#' @references   S. Kazi & C.A. Hipsley. 2018. Conserved evolution of skull shape in Caribbean
+#' head-first burrowing worm lizards (Squamata: Amphisbaenia) Biological Journal
+#' of the Linnean Society 125:14-29
+#'
+#' M. Vidal-García, L. Bandara and J.S. Keogh. 2018. ShapeRotator: An R tool
+#' for standardized rigid rotations of articulated three-dimensional
+#' structures with application for geometric morphometrics.
+#' Ecology and Evolution. DOI: 10.1002/ece3.4018
+#'
+#' @keywords datasets
+#' @usage data(double_data_2)
+"double_data_2"
