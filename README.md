@@ -6,15 +6,17 @@
 From CRAN:
 `install.packages("ShapeRotator")`
 `library(ShapeRotator)`
+[![CRAN RStudio mirror downloads](https://cranlogs.r-pkg.org/badges/grand-total/ShapeRotator?color=blue)](https://r-pkg.org/pkg/ShapeRotator)
 
 From this github repository:
+
 `library(devtools)`
 
 `install_github("marta-vidalgarcia/ShapeRotator")`
 `library(ShapeRotator)`
 
 ***
-[![CRAN RStudio mirror downloads](https://cranlogs.r-pkg.org/badges/grand-total/ShapeRotator?color=blue)](https://r-pkg.org/pkg/ShapeRotator)
+
 
 
 Please check out the Wiki to know more about the functions available within the ShapeRotator R tool and the basic steps required in order to successfully implement the rotation on a dataset of 3D coordinates. ShapeRotator allows the rigid rotation of sets of both landmarks and semilandmarks used in geometric morphometric analyses, enabling morphometric analyses of complex objects, articulated structures, or multiple parts within an object or specimen.
