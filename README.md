@@ -10,7 +10,6 @@
 
 `library(ShapeRotator)`
 
-[![CRAN RStudio mirror downloads](https://cranlogs.r-pkg.org/badges/grand-total/ShapeRotator?color=blue)](https://r-pkg.org/pkg/ShapeRotator)
 ***
 
 #### From this github repository:
